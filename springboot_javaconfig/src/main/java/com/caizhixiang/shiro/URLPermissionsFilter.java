@@ -3,8 +3,6 @@ package com.caizhixiang.shiro;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;

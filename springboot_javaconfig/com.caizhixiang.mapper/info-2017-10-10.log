@@ -1,0 +1,38 @@
+2017-10-10 09:33:41 [main] INFO  com.caizhixiang.SpringBootProviderApplication - Starting SpringBootProviderApplication on PC201701221351 with PID 8144 (C:\E\java\cop\git\springboot_parent\springboot_javaconfig\target\classes started by Administrator in C:\E\java\cop\git\springboot_parent\springboot_javaconfig)
+2017-10-10 09:33:41 [main] INFO  com.caizhixiang.SpringBootProviderApplication - No active profile set, falling back to default profiles: default
+2017-10-10 09:33:42 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 5.2.4.Final
+2017-10-10 09:33:49 [main] INFO  org.apache.catalina.core.StandardService - Starting service Tomcat
+2017-10-10 09:33:49 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-10-10 09:33:50 [localhost-startStop-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2017-10-10 09:33:54 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-80"]
+2017-10-10 09:33:54 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler [http-nio-80]
+2017-10-10 09:33:54 [main] INFO  org.apache.tomcat.util.net.NioSelectorPool - Using a shared selector for servlet write/read
+2017-10-10 09:33:54 [main] INFO  com.caizhixiang.SpringBootProviderApplication - Started SpringBootProviderApplication in 14.43 seconds (JVM running for 16.251)
+2017-10-10 09:34:14 [http-nio-80-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] INITIALIZING TEMPLATE ENGINE
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.templateresolver.ServletContextTemplateResolver
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver - [THYMELEAF] INITIALIZING TEMPLATE RESOLVER: org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.templateresolver.AbstractTemplateResolver - [THYMELEAF] TEMPLATE RESOLVER INITIALIZED OK
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.messageresolver.AbstractMessageResolver - [THYMELEAF] INITIALIZING MESSAGE RESOLVER: org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.messageresolver.AbstractMessageResolver - [THYMELEAF] MESSAGE RESOLVER INITIALIZED OK
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.TemplateEngine.CONFIG - [THYMELEAF] TEMPLATE ENGINE CONFIGURATION:
+[THYMELEAF] * Cache Factory implementation: org.thymeleaf.cache.StandardCacheManager
+[THYMELEAF] * Template modes:
+[THYMELEAF]     * LEGACYHTML5
+[THYMELEAF]     * HTML5
+[THYMELEAF]     * VALIDXML
+[THYMELEAF]     * XHTML
+[THYMELEAF]     * VALIDXHTML
+[THYMELEAF]     * XML
+[THYMELEAF] * Template resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.templateresolver.ServletContextTemplateResolver
+[THYMELEAF]     * org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver
+[THYMELEAF] * Message resolvers (in order):
+[THYMELEAF]     * org.thymeleaf.spring4.messageresolver.SpringMessageResolver
+[THYMELEAF] * Dialect [1 of 2]: org.thymeleaf.spring4.dialect.SpringStandardDialect
+[THYMELEAF]     * Prefix: "th"
+[THYMELEAF] * Dialect [2 of 2]: nz.net.ultraq.thymeleaf.LayoutDialect
+[THYMELEAF]     * Prefix: "layout"
+[THYMELEAF] TEMPLATE ENGINE CONFIGURED OK
+2017-10-10 09:34:15 [http-nio-80-exec-1] INFO  org.thymeleaf.TemplateEngine - [THYMELEAF] TEMPLATE ENGINE INITIALIZED

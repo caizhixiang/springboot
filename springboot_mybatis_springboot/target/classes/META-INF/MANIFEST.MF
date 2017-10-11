@@ -3,7 +3,7 @@ Implementation-Title: springboot_mybatis_springboot
 Implementation-Version: 1.0.1-SNAPSHOT
 Built-By: Administrator
 Implementation-Vendor-Id: com.springboot
-Build-Jdk: 1.8.0_131
+Build-Jdk: 1.8.0_101
 Implementation-URL: http://projects.spring.io/spring-boot/springboot_p
  arent/springboot_mybatis_springboot/
 Created-By: Maven Integration for Eclipse

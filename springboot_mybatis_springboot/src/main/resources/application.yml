@@ -20,3 +20,10 @@ mybatis:
   typeAliasesPackage: com.caizhixiang.model  
   mapperLocations: classpath*:mapper/*.xml  
   configLocation: classpath:mybatis-config.xml
+
+#有关插件的配置情况
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" th:href="@{/adminLTE/bootstrap/css/bootstrap.min.css}"/>
+  <!-- Font Awesome 图标字体 -->
+  <link rel="stylesheet" th:href="@{/adminLTE/bootstrap/css/font-awesome.min.css}"/>
+  <!-- Theme style -->
+  <link rel="stylesheet" th:href="@{/adminLTE/dist/css/AdminLTE.min.css}"/>
+  <link rel="stylesheet" th:href="@{/adminLTE/dist/css/datepicker.css}"/>
+  <!-- 皮肤样式 -->
+  <link rel="stylesheet" th:href="@{/adminLTE/dist/css/skins/_all-skins.min.css}"/>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<section class="content">
+  <div class="box box-default color-palette-box">
+    <div class="box-body" >
+      <table id="example2" class="table table-bordered table-striped">
+        <thead>
+          <tr>
+            <th>地区编码</th>
+            <th>地区名称</th>
+            <th>地区级别</th>
+            <th>上级地区编码</th>
+            <th>上级地区名称</th>
+            <th>邮政编码前缀</th>
+            <th>城市拼音</th>
+            <th>城市拼音缩写</th>
+            <th>城市首字母</th>
+            <th>中文名称缩写</th>
+            
+            <th>城市等级</th>
+            <th>是否省会</th>
+            <th>是否直辖市</th>
+            <th>显示顺序</th>
+            <th>状态</th>
+            <th>是否自定义地区</th>
+            <th>不设区县的地级市</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody id="tr_information">
+        
+        </tbody>
+      </table>
+      <div class="d_pagination"></div>
+    </div>
+  </div>
+</section>
+
+<!-- jQuery 2.2.3 -->
+<script th:src="@{/adminLTE/plugins/jQuery/jquery-2.2.3.min.js}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script th:src="@{/adminLTE/plugins/jQueryUI/jquery-ui.min.js}"></script>
+<!-- Bootstrap 3.3.6 -->
+<script th:src="@{/adminLTE/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/adminLTE/dist/js/app.min.js}"></script>
+<!-- 分页插件 -->
+<script th:src="@{/adminLTE/plugins/pagination/jquery.pagination.js}"></script>
+<!-- 表单验证插件 -->
+<script th:src="@{/adminLTE/plugins/bootstrapvalidator/bootstrapvalidator.min.js}"></script>
+<!-- 日历插件 -->
+<script th:src="@{/adminLTE/plugins/datepicker/bootstrap-datepicker.min.js}"></script>
+
+<!-- Bootstrap 3.3.6 -->
+<script th:src="@{/js/util.js}"></script>
+<script th:src="@{/js/codeTable/areaList.js}"></script>
+</body>
+</html>

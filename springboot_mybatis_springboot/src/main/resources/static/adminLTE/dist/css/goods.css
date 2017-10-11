@@ -1,0 +1,319 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style-type: none;
+}
+table{
+  width: 100%;
+}
+legend{
+  font-size: 14px;
+  padding:5px;
+}
+.mt10{
+	margin-top:10px;
+}
+.pl20{
+  padding-left:20px ;
+  width: 120px;
+  /*text-align: left !important;*/
+  /*color: #333!important;*/
+}
+.filehidden{
+	opacity:0;
+	position:absolute;
+	left:0;
+	top:0;
+	font-size:25px;
+}
+.storage1{
+	width:50px;
+	height:50px;
+	/*border:2px solid #3c8dbc;*/
+	background:#3c8dbc;
+	color:#fff;
+	line-height:50px;
+	text-align:center;
+	position:fixed;
+	right:40px;
+	bottom:20px;
+	cursor:pointer;
+	z-index:999999;
+}
+
+.popUp{
+	border:3px solid #ecf0f5;
+	padding:10px;
+	overflow:hidden
+}
+
+.wmp {
+  width: 98%;
+  padding:2%;
+  margin: 10px auto 0;
+  background: #fff;
+  border-radius: 5px;
+}
+.wmp .content{
+  padding:0;
+
+}
+.wmp .box{
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+}
+.baseInformation{
+  width: 100%;
+  margin-bottom:15px;
+}
+.baseInformation ul{
+  display: -webkit-flex; /* Safari */
+  display: flex;
+}
+.baseInformation li{
+  float: left;
+  flex: 1;
+  -webkit-flex:1;
+}
+.q-goods .goodsConfig{
+  overflow: hidden;
+  display: -webkit-flex; /* Safari */
+  display: flex;
+  border-radius: 5px;
+  border:1px solid #eee;
+}
+.q-goods .goodsConfig li{
+  float: left;
+  flex: 1;
+  -webkit-flex:1;
+  text-align: center;
+  height: 40px;
+  line-height:40px;
+  border-right: 1px solid #eee;
+  cursor: pointer;
+
+}
+.q-goods .goodsConfig .now{
+  background: #3c8dbc;
+  color:#fff
+}
+.q-goods .goodsConfig li:last-child{
+  border-right: none;
+}
+.hide{
+  display: none;
+}
+
+
+
+/*基础信息css*/
+.vermiddle{
+  min-height: 30px;
+  line-height:35px;
+}
+.innerWrap{
+  border:1px solid #f1f1f1;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.good-title{
+  font-size: 16px;
+  font-family: "Microsoft Yahei";
+  height: 30px;
+  line-height:30px;
+  background: rgba(78,158,204,.8);
+  border-radius: 10px;
+  color: #fff;
+  text-indent: 2em;
+}
+.goods-table{
+
+}
+.goods-table .red{
+  color:#ff0000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.effectiveDays input[type=text]{
+  display: inline-block;
+  width: 80px;
+  margin:0 5px;
+}
+
+/*商品列表*/
+.tab2_list{
+  width: 100%;
+}
+.tab2_list li{
+  border:1px solid #eee;
+  border-radius: 5px;
+  margin-top:10px;
+  display: flex;
+  display: -webkit-flex;
+  text-align: center;
+  display: table;
+  width: 100%;
+}
+.upload_icon{
+  display: inline-block !important;
+  width: 300px;
+  vertical-align: middle;
+}
+.tab2_list li .flex_list .pic{
+  margin-top:10px;
+}
+.tab2_list li .flex_list{
+  flex: 2;
+  -webkit-flex: 2;
+  border-right: 1px solid #eee;
+  display:table-cell;
+  padding:5px 0;
+}
+.tab2_list li .flex_list_l{
+  width: 200px;
+}
+
+.product_basic p{
+  display: flex;
+  display: -webkit-flex;
+}
+.product_basic p span{
+  flex: 4;
+}
+.product_basic p span.title{
+  flex: 1;
+}
+.product_basic p label input{
+  vertical-align: middle;
+  margin:0 2px 0 5px;
+}
+
+.base_config_modifiy li{
+  display: flex;
+  margin-top:15px;
+}
+.base_config_modifiy li >div{
+  flex: 8;
+
+}
+.base_config_modifiy li .title{
+  flex: 1;
+  text-align: right;
+}
+.cueditor{
+  text-align: left!important;
+}
+
+
+
+/*投保要素*/
+.insureFactor{
+
+}
+.insureFactor li{
+  display: flex;
+  display: -webkit-flex;
+}
+.insureFactor li p{
+  flex: 1;
+}
+.insureFactor li .t3{
+  flex:12 ;
+  flex-wrap:wrap;
+}
+.product_exam_option .exam_title span{
+  width:100px;
+}
+
+.product_exam_option{
+
+}
+.product_exam_option li{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.question {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px 0;
+  position: relative;
+  padding: 20px 0 10px
+}
+.quetionInput {
+  display: block
+}
+
+.questionOption,.qustionBtn {
+  margin-top: 10px
+}
+
+.question-title {
+  position: absolute;
+  background: #fff;
+  left: 10px;
+  top: -15px;
+  width: 120px;
+  height: 30px;
+  line-height: 30px;
+  text-indent: 2rem
+}
+.product_exam_option .exam_title{
+
+}
+.product_exam_option .exam_add_option{
+
+}
+
+.bar_save{
+	text-align:center
+}
+.product_tab4_setting_table{
+	
+}
+.product_tab4_setting_table table td{
+	position:relative;
+	
+}
+.product_tab4_setting_table table .form-control{
+	display:inline-block;
+}
+.opt_btn{
+	position:absolute;
+	right:10px;
+	top:10px;
+}
+.modal-lg-lar{
+	width:1200px;
+}
+.w400{
+	width:400px;
+	margin-right:10px;
+}
+.w200{
+	width:200px;
+}
+.w100{
+	width:100px;
+}
+.w150{
+	width:150px;
+}
+
+
+#insure_config tr{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+

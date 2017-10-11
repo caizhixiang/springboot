@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.caizhixiang.mapper.AreaMapper">
+
+    <resultMap type="com.caizhixiang.model.Area" id="resultMapOfTArea">
+        <result column="id" property="id" />
+        <result column="area_code" property="areaCode" />
+        <result column="area_name" property="areaName" />
+        <result column="area_level" property="areaLevel" />
+        <result column="parent_area_code" property="parentAreaCode" />
+        <result column="parent_area_name" property="parentAreaName" />
+        <result column="postal_code_prefix" property="postalCodePrefix" />
+        <result column="city_level" property="cityLevel" />
+        <result column="city_pinyin" property="cityPinyin" />
+        <result column="pinyin_short" property="pinyinShort" />
+        <result column="city_initials" property="cityInitials" />
+        <result column="name_abbreviation" property="nameAbbreviation" />
+        <result column="is_provincial" property="isProvincial" />
+        <result column="is_municipality" property="isMunicipality" />
+        <result column="display_order" property="displayOrder" />
+        <result column="statu" property="statu" />
+        <result column="is_custom" property="isCustom" />
+        <result column="no_districts_or_countries" property="noDistrictsOrCountries" />
+    </resultMap>
+  
+    <sql id="FieldsOfTArea">id, area_code, area_name, area_level, parent_area_code, parent_area_name, postal_code_prefix, city_level, city_pinyin, pinyin_short, city_initials, name_abbreviation, is_provincial, is_municipality, display_order, statu, no_districts_or_countries, is_custom</sql>
+	
+	<sql id="FieldsOfTAreaWithoutId">area_code, area_name, area_level, parent_area_code, parent_area_name, postal_code_prefix, city_level, city_pinyin, pinyin_short, city_initials, name_abbreviation, is_provincial, is_municipality, display_order, statu, no_districts_or_countries, is_custom</sql>
+  
+    <select id="findById" resultMap="resultMapOfTArea" parameterType="java.lang.Long">
+        select
+        <include refid="FieldsOfTArea" />
+        from t_area where id = #{id}
+    </select>
+  
+  
+    <select id="findByExample" resultMap="resultMapOfTArea" parameterType="com.caizhixiang.model.Area">
+        select
+        <include refid="FieldsOfTArea" />
+        from t_area
+        <where>
+        	<if test="id != null"> and id = #{id}</if>
+        	<if test="areaCode != null"> and area_code = #{areaCode}</if>
+        	<if test="areaName != null"> and area_name = #{areaName}</if>
+        	<if test="areaLevel != null"> and area_level = #{areaLevel}</if>
+        	<if test="parentAreaCode != null"> and parent_area_code = #{parentAreaCode}</if>
+        	<if test="parentAreaName != null"> and parent_area_name = #{parentAreaName}</if>
+        	<if test="postalCodePrefix != null"> and postal_code_prefix = #{postalCodePrefix}</if>
+        	<if test="cityLevel != null"> and city_level = #{cityLevel}</if>
+        	<if test="cityPinyin != null"> and city_pinyin = #{cityPinyin}</if>
+        	<if test="pinyinShort != null"> and pinyin_short = #{pinyinShort}</if>
+        	<if test="cityInitials != null"> and city_initials = #{cityInitials}</if>
+        	<if test="nameAbbreviation != null"> and name_abbreviation = #{nameAbbreviation}</if>
+        	<if test="isProvincial != null"> and is_provincial = #{isProvincial}</if>
+        	<if test="isMunicipality != null"> and is_municipality = #{isMunicipality}</if>
+        	<if test="displayOrder != null"> and display_order = #{displayOrder}</if>
+        	<if test="statu != null"> and statu = #{statu}</if>
+        	<if test="isCustom != null"> and is_custom = #{isCustom}</if>
+        	<if test="noDistrictsOrCountries != null"> and no_districts_or_countries = #{noDistrictsOrCountries}</if>
+        </where>
+    </select>
+  
+    <select id="findByParams" resultMap="resultMapOfTArea" parameterType="java.util.Map">
+        select <include refid="FieldsOfTArea" /> from t_area
+        <where>
+			<if test="id != null and id != ''"> and id = #{id}</if>
+			<if test="areaCode != null and areaCode !=''"> and area_code = #{areaCode}</if>
+			<if test="areaName != null and areaName !=''"> and area_name like CONCAT('%',#{areaName},'%')</if>
+			<if test="areaLevel != null and areaLevel !=''" > and area_level = #{areaLevel}</if>
+			<if test="parentAreaCode != null and parentAreaCode !=''"> and parent_area_code = #{parentAreaCode}</if>
+			<if test="parentAreaName != null and parentAreaName !=''"> and parent_area_name like CONCAT('%',#{parentAreaName},'%')</if>
+			<if test="postalCodePrefix != null and postalCodePrefix!=''"> and postal_code_prefix = #{postalCodePrefix}</if>
+			<if test="cityLevel != null and cityLevel !=''"> and city_level = #{cityLevel}</if>
+			<if test="cityPinyin != null and cityPinyin !=''"> and city_pinyin = #{cityPinyin}</if>
+			<if test="pinyinShort != null and pinyinShort !=''"> and pinyin_short = #{pinyinShort}</if>
+			<if test="cityInitials != null and cityInitials !=''"> and city_initials = #{cityInitials}</if>
+			<if test="nameAbbreviation != null and nameAbbreviation !=''"> and name_abbreviation like CONCAT('%',#{nameAbbreviation},'%')</if>
+			<if test="isProvincial != null and isProvincial !=''"> and is_provincial = #{isProvincial}</if>
+			<if test="isMunicipality != null and isMunicipality !=''"> and is_municipality = #{isMunicipality}</if>
+			<if test="statu != null and statu !=''"> and statu = #{statu}</if>
+			<if test="isCustom != null and isCustom !=''"> and is_custom = #{isCustom}</if>
+        	<if test="noDistrictsOrCountries != null and noDistrictsOrCountries !=''"> and no_districts_or_countries = #{noDistrictsOrCountries}</if>
+		</where>
+		ORDER BY area_code
+    </select>
+    <select id="findByParamsByOrder" resultMap="resultMapOfTArea" parameterType="java.util.Map">
+        select <include refid="FieldsOfTArea" /> from t_area
+        <where>
+			<if test="id != null and id != ''"> and id = #{id}</if>
+			<if test="areaCode != null and areaCode !=''"> and area_code = #{areaCode}</if>
+			<if test="areaName != null and areaName !=''"> and area_name like CONCAT('%',#{areaName},'%')</if>
+			<if test="areaLevel != null and areaLevel !=''" > and area_level = #{areaLevel}</if>
+			<if test="parentAreaCode != null and parentAreaCode !=''"> and parent_area_code = #{parentAreaCode}</if>
+			<if test="parentAreaName != null and parentAreaName !=''"> and parent_area_name like CONCAT('%',#{parentAreaName},'%')</if>
+			<if test="postalCodePrefix != null and postalCodePrefix!=''"> and postal_code_prefix = #{postalCodePrefix}</if>
+			<if test="cityLevel != null and cityLevel !=''"> and city_level = #{cityLevel}</if>
+			<if test="cityPinyin != null and cityPinyin !=''"> and city_pinyin = #{cityPinyin}</if>
+			<if test="pinyinShort != null and pinyinShort !=''"> and pinyin_short = #{pinyinShort}</if>
+			<if test="cityInitials != null and cityInitials !=''"> and city_initials = #{cityInitials}</if>
+			<if test="nameAbbreviation != null and nameAbbreviation !=''"> and name_abbreviation like CONCAT('%',#{nameAbbreviation},'%')</if>
+			<if test="isProvincial != null and isProvincial !=''"> and is_provincial = #{isProvincial}</if>
+			<if test="isMunicipality != null and isMunicipality !=''"> and is_municipality = #{isMunicipality}</if>
+			<if test="statu != null and statu !=''"> and statu = #{statu}</if>
+			<if test="isCustom != null and isCustom !=''"> and is_custom = #{isCustom}</if>
+        	<if test="noDistrictsOrCountries != null and noDistrictsOrCountries !=''"> and no_districts_or_countries = #{noDistrictsOrCountries}</if>
+		</where>
+		ORDER BY IF(ISNULL(display_order),1,0) , area_code
+    </select>
+    
+  
+
+
+</mapper>

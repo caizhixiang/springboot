@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.caizhixiang.mapper.PoiMapper">
+
+	<sql id="FieldsOfTPolicyWithoutId">serialNum, orderNo, integral, orderTime, orderStatus, payStatus, sendStatus, getAccount, faceValue, goodsName, calcPrice, quantity</sql>
+  
+    <insert id="batchSave" parameterType="java.util.List">
+	       insert into integral(<include refid="FieldsOfTPolicyWithoutId" />) values
+	       <foreach collection="list" item="item" index="index" separator=",">
+	           (#{item.serialNum}, #{item.orderNo}, #{item.integral}, #{item.orderTime}, #{item.orderStatus}, #{item.payStatus}, #{item.sendStatus}, #{item.getAccount}, #{item.faceValue}, #{item.goodsName}, #{item.calcPrice}, #{item.quantity})
+	       </foreach>
+		</insert>
+	
+	
+</mapper>

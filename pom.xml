@@ -210,5 +210,6 @@
 		<module>springboot_mybatis_spring</module>
 		<module>springboot_mybatis_springboot</module>
 		<module>springboot_javaconfig</module>
+		<module>springboot_poi</module>
 	</modules>
 </project>

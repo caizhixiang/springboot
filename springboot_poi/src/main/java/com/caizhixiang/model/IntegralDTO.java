@@ -1,6 +1,7 @@
 package com.caizhixiang.model;
 
 import java.io.Serializable;
+
 import java.util.Date;
 
 import lombok.AllArgsConstructor;
@@ -8,18 +9,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-/**
- * 积分对账DTO
- * @author lhm
- *
- */
 @Data
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 public class IntegralDTO implements Serializable,Comparable<IntegralDTO>{
-	
-	private static final long serialVersionUID = -4814731601957417198L;
 
 	private String serialNum;
 	private String orderNo;
@@ -33,15 +27,6 @@ public class IntegralDTO implements Serializable,Comparable<IntegralDTO>{
 	private String faceValue;
 	private String calcPrice;
 	private String quantity;
-	/** 数据来源1文件2系统 */
-	private String dataFrom;
-		
-	/** 差异原因1file无记录2sys无记录3字段有差异 */
-	private String diffReason;
-	
-	/** 对账批次号 */
-	private String billCheckBatchNo;
-	
 	
 	@Override
 	public int compareTo(IntegralDTO integralDTO) {

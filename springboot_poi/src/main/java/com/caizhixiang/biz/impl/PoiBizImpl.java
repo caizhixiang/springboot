@@ -18,5 +18,10 @@ public class PoiBizImpl implements PoiBiz {
 		// TODO Auto-generated method stub
 		return poiMapper.batchSave(list);
 	}
+	@Override
+	public List<IntegralDTO> findAll() {
+		// TODO Auto-generated method stub
+		return poiMapper.findAll();
+	}
 
 }

@@ -3,6 +3,21 @@
 
 <mapper namespace="com.caizhixiang.mapper.PoiMapper">
 
+	 <resultMap type="com.caizhixiang.model.IntegralDTO" id="resultMapOfTOperationStatistics">
+        <result column="serialNum" property="serialNum" />
+        <result column="orderNo" property="orderNo" />
+        <result column="integral" property="integral" />
+        <result column="orderTime" property="orderTime" />
+        <result column="orderStatus" property="orderStatus" />
+        <result column="payStatus" property="payStatus" />
+        <result column="sendStatus" property="sendStatus" />
+        <result column="getAccount" property="getAccount" />
+        <result column="goodsName" property="goodsName" />
+        <result column="faceValue" property="faceValue" />
+        <result column="calcPrice" property="calcPrice" />
+        <result column="quantity" property="quantity" />
+    </resultMap>
+    
 	<sql id="FieldsOfTPolicyWithoutId">serialNum, orderNo, integral, orderTime, orderStatus, payStatus, sendStatus, getAccount, faceValue, goodsName, calcPrice, quantity</sql>
   
     <insert id="batchSave" parameterType="java.util.List">
@@ -13,4 +28,7 @@
 		</insert>
 	
 	
+    <select id="findAll" resultMap="resultMapOfTOperationStatistics">
+        select <include refid="FieldsOfTPolicyWithoutId" /> from integral
+    </select>
 </mapper>

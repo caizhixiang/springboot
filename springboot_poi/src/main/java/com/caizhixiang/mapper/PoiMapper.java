@@ -9,4 +9,6 @@ import com.caizhixiang.model.IntegralDTO;
 public interface PoiMapper {
 
 	public int batchSave(List<IntegralDTO> list);
+	
+	public List<IntegralDTO> findAll();
 }

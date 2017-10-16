@@ -19,5 +19,11 @@ public class PoiServiceImpl implements PoiService {
 		// TODO Auto-generated method stub
 		return poiBiz.batchSave(list);
 	}
+
+	@Override
+	public List<IntegralDTO> findAll() {
+		// TODO Auto-generated method stub
+		return poiBiz.findAll();
+	}
 	
 }

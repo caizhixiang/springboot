@@ -6,4 +6,6 @@ import com.caizhixiang.model.IntegralDTO;
 
 public interface PoiBiz {
 	public int batchSave(List<IntegralDTO> list);
+	
+	public List<IntegralDTO> findAll();
 }

@@ -17,5 +17,6 @@
 <!-- 指定MyBatis如何自动映射列到字段/属性。PARTIAL只会自动映射简单，没有嵌套的结果。FULL会自动映射任意复杂的结果（嵌套的或其他情况）http://blog.csdn.net/isea533/article/details/50359390 -->  
         <setting name="autoMappingBehavior" value="PARTIAL" />  
 		<setting name="logImpl" value="STDOUT_LOGGING" />  
+		<!-- <setting name="logImpl" value="LOG4J" />   -->
 	</settings>
 </configuration>  

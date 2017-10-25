@@ -110,22 +110,18 @@
   </appender>
 
   <!-- package log level configure -->
-  <logger name="org.springframework" level="WARN" />
-  <logger name="org.apache.ibatis" level="WARN" />
-  <logger name="org.mybatis.spring" level="WARN" />
-  <logger name="java.sql" level="WARN" />
-  <logger name="ch.qos.logback" level="ERROR" />
+  <logger name="org.springframework" level="INFO" />
+  <logger name="org.apache.ibatis" level="INFO" />
+  <logger name="org.mybatis.spring" level="INFO" />
+  <logger name="java.sql" level="INFO" />
+  <logger name="ch.qos.logback" level="INFO" />
   <logger name="druid.sql" level="INFO" />
 	<logger name="com.caizhixiang.mapper" level="INFO">
-        <!-- <appender-ref ref="STDOUT" /> -->
+        <appender-ref ref="CONSOLE" />
     </logger>
 
   <!-- root级别 WARN -->
   <root level="INFO">
     <appender-ref ref="CONSOLE" />
-    <!-- 异步文件输出 -->
-    <appender-ref ref="INFO_ASYNC" />
-    <appender-ref ref="WARN_ASYNC" />
-    <appender-ref ref="ERROR_ASYNC" />
   </root>
 </configuration>

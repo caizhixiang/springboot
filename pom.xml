@@ -211,5 +211,6 @@
 		<module>springboot_mybatis_springboot</module>
 		<module>springboot_javaconfig</module>
 		<module>springboot_poi</module>
+		<module>springboot_schedule</module>
 	</modules>
 </project>
